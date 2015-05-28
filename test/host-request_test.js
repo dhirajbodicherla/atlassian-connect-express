@@ -79,7 +79,11 @@ describe('Host Request', function () {
     });
 
     after(function (done) {
-        server.close();
+        try{
+          server.close();
+        }
+        catch (err){}
+        
         done();
     });
 
